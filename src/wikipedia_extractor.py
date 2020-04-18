@@ -8,7 +8,7 @@ import pandas as pd
 
 def get_player_names(path):
     data = pd.read_csv(path)
-    return data.player_name.drop_duplicates()
+    return data.player_name.drop_duplicates().to_frame()
 
 
 def get_wikipedia_page(player):
@@ -40,49 +40,67 @@ def read_players_infobox(pickle_path):
 
 
 def get_player_height(players, player_stats):
-    tqdm.pandas(desc="Player Height Extraction Progress")
-    height = players.progress_apply(lambda x:
-                                    player_stats[x]['height'])
-    return pd.concat([players, height.rename('height')], axis=1)
+    height_list = []
+    for player in players.player_name:
+        if player_stats[player] is not None:
+            if 'height' in player_stats[player].keys():
+                height_list.append(player_stats[player]['height'])
+                continue
+        height_list.append(None)
+    players['height'] = pd.Series(height_list)
+    return players
 
 
 def get_player_nationalities(players, player_stats):
     national_team_list = []
-    for player in players.player_name:
-        latest_national_team = 1
-        while True:
+    for player in tqdm(players.player_name):
+        if player in player_stats.keys() and player_stats[player] is not None:
+            latest_national_team = 1
+            while True:
+                try:
+                    player_stats[player]["nationalteam{}".format(latest_national_team)]
+                except KeyError:
+                    latest_national_team -= 1
+                    break
+                latest_national_team += 1
+            if latest_national_team == 0:
+                national_team_list.append(None)
+                continue
+            s = player_stats[player]["nationalteam{}".format(latest_national_team)]
             try:
-                player_stats[player]["nationalteam{}".format(latest_national_team)]
-            except KeyError:
-                latest_national_team -= 1
-                break
-            latest_national_team += 1
-        if latest_national_team == 0:
+                regex_s = re.search("\|(.*)\]\]", s)
+                national_team_list.append(regex_s.group(1))
+            except AttributeError:
+                national_team_list.append(s)
+        else:
             national_team_list.append(None)
-            continue
-        s = player_stats[player]["nationalteam{}".format(latest_national_team)]
-        s = re.search("\|(.*)\]\]", s)
-        national_team_list.append(s.group(1))
     players['nationality'] = national_team_list
     return players
 
 
 def get_player_goals(players, player_stats):
     goals_list = []
-    for player in players.player_name:
-        latest_club_num = 1
-        goals = 0
-        while True:
-            try:
-                goals += int(player_stats[player]["goals{}".format(latest_club_num)])
-            except KeyError:
-                latest_club_num -= 1
-                break
-            latest_club_num += 1
-        if latest_club_num == 0:
+    for player in tqdm(players.player_name):
+        if player in player_stats.keys() and player_stats[player] is not None:
+            latest_club_num = 1
+            goals = 0
+            while True:
+                try:
+                    goal_str = player_stats[player]["goals{}".format(latest_club_num)]
+                    try:
+                        goals += int(goal_str)
+                    except ValueError:
+                        goals += 0
+                except KeyError:
+                    latest_club_num -= 1
+                    break
+                latest_club_num += 1
+            if latest_club_num == 0:
+                goals_list.append(None)
+                continue
+            goals_list.append(goals)
+        else:
             goals_list.append(None)
-            continue
-        goals_list.append(goals)
     players['goals'] = goals_list
     return players
 
