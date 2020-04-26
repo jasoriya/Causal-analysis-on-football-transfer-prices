@@ -51,3 +51,25 @@ Our [project report](https://github.com/jasoriya/Causal-analysis-on-football-tra
 
 ### Data Modeling
 First, we created the BayesianModel by defining the nodes and edges of the DAG. The BayesianEstimator was used to learn the Conditional Probability Distribution from the dataset with an equivalent sample size of 10. Using the package pgmy we were able to generate the CPTs, which we serialized and imported into our pyro model. The code for this can be found in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/Causal%20Inference%2C%20Interventions%2C%20and%20Counterfactuals.ipynb) jupyter notebook. Along with the causal model, this notebook also contains our experiments like interventions and counterfactuals.
+
+### Dependencies
+
+
+| Language |      Package      |
+|----------|-------------------|
+| Python   | pyro              |
+| Python   | pgmpy             |
+| Python   | pandas            |
+| Python   | numpy             |
+| Python   | fuzzywuzzy        |
+| Python   | pycountry-convert |
+| Python   | matplotlib        |
+| Python   | beautifulsoup     |
+| Python   | wikipedia         |
+| Python   | wptools           |
+| Python   | tqdm              |
+| Python   | requests          |
+| R        | bnlearn           |
+| R        | graphviz          |
+
+
