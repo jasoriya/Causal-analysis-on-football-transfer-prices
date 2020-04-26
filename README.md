@@ -15,7 +15,7 @@ In the world of soccer, a German website, transfermarkt.de, is the authority in 
 Our motivation is to model this inflation in prices and try to accurately classify players in price brackets. We want to model the negotiated price of these players based on many variables. We believe the prototype model we build could be eventually used to help teams understand the market better and find undervalued players.
 
 
-[See video abstract](https://www.youtube.com/)
+[See video abstract](https://www.youtube.com/watch?v=MEVN8X0xl70&feature=youtu.be)
 
 ## How to explore this project
 
