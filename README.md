@@ -23,7 +23,7 @@ We began with the initial [transfers dataset](https://github.com/jasoriya/Causal
 
 ### Data Pre-processing:
 Here we will list some of the variables that were pre-processed by us and the notebooks reponsible for the same:
-  - [Soccer leagues](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20 notebooks/generating_from_league.ipynb)
+  - [Soccer leagues](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/generating_from_league.ipynb)
   - [Soccer clubs](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20 notebooks/encoding_club_tier.ipynb)
   - [Player positions](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/categorizing_positions.ipynb)
   - [Player age](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/Categorizing_age.ipynb)
