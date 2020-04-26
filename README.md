@@ -29,7 +29,7 @@ Here we will list some of the variables that were pre-processed by us and the no
   - [Player age](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/Categorizing_age.ipynb)
   - [Transfer year](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/transfer_price_%20categorization.ipynb)
 
-Lastly, these pre-processed variables from the initial dataset were processed using [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/final_preprocessing.ipynb) jypyter notebook.
+Lastly, these pre-processed variables from the initial dataset were processed using [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/final_preprocessing.ipynb) jypyter notebook.
 
 ### Data Augmentation
 We decided to augment our current dataset with more third-party data, we wanted to scrape for the following variables.
