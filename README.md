@@ -2,7 +2,7 @@
 
 ## Authors 
 
-[Shreyans JAsoriya](https://www.linkedin.com/in/shreyansjasoriya/), [Mohit Chandarana](https://www.linkedin.com/in/mohitchandarana/), [Jayanth Chava](https://www.linkedin.com/in/jay-chava/)
+[Shreyans Jasoriya](https://www.linkedin.com/in/shreyansjasoriya/), [Mohit Chandarana](https://www.linkedin.com/in/mohitchandarana/), [Jayanth Chava](https://www.linkedin.com/in/jay-chava/)
 
 ## Abstract
 
