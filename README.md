@@ -44,7 +44,7 @@ The two sources from where we scraped the following were (the scraper code is at
 - [Wikipedia pages of soccer players](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/src/wikipedia_extractor.py)
 - [fifaindex.com](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/src/fifa_dataset_extractor.py)
 
-The preprocessing of the newly augmented data was done in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/data_merger.ipynb) jupyter notebook. 
+The preprocessing of the newly augmented data was done in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing\ notebooks/data_merger.ipynb) jupyter notebook. 
 
 ### D-separation and Conditional Tests on the data
 Our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Report.pdf) talks in more detail about the d-separation and conditional independence tests we performed. Our CI tests were performed using the R package bnlearn in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/DSepCITests.ipynb) notebook. 
