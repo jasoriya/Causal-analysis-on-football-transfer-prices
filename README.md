@@ -23,8 +23,8 @@ We began with the initial [transfers dataset](https://github.com/jasoriya/Causal
 
 ### Data Pre-processing:
 Here we will list some of the variables that were pre-processed by us and the notebooks reponsible for the same:
-  - [Soccer leagues](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/generating_from_league.ipynb)
-  - [Soccer clubs](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/encoding_club_tier.ipynb)
+  - [Soccer leagues](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20 notebooks/generating_from_league.ipynb)
+  - [Soccer clubs](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20 notebooks/encoding_club_tier.ipynb)
   - [Player positions](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/categorizing_positions.ipynb)
   - [Player age](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/Categorizing_age.ipynb)
   - [Transfer year](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing notebooks/transfer_price_ categorization.ipynb)
@@ -44,7 +44,7 @@ The two sources from where we scraped the following were (the scraper code is at
 - [Wikipedia pages of soccer players](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/src/wikipedia_extractor.py)
 - [fifaindex.com](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/src/fifa_dataset_extractor.py)
 
-The preprocessing of the newly augmented data was done in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing\ notebooks/data_merger.ipynb) jupyter notebook. 
+The preprocessing of the newly augmented data was done in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/data_merger.ipynb) jupyter notebook. 
 
 ### D-separation and Conditional Tests on the data
 Our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Report.pdf) talks in more detail about the d-separation and conditional independence tests we performed. Our CI tests were performed using the R package bnlearn in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/DSepCITests.ipynb) notebook. 
