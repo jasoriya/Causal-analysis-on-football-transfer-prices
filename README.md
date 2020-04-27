@@ -19,7 +19,7 @@ Our motivation is to model this inflation in prices and try to accurately classi
 
 ## How to explore this project
 
-We began with the initial [transfers dataset](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/data/transfers1.0.csv). Since we are working on an idea which has very little literature, we understood that it is imperative to spend a lot of time studying and processing our variables based on intuition and data trends. A detailed description of our preprocessing and modelling process can be found in our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Report.pdf).  
+We began with the initial [transfers dataset](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/data/transfers1.0.csv). Since we are working on an idea which has very little literature, we understood that it is imperative to spend a lot of time studying and processing our variables based on intuition and data trends. A detailed description of our preprocessing and modelling process can be found in our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/CS7290_Project_Report.pdf).  
 
 ### Data Pre-processing:
 Here we will list some of the variables that were pre-processed by us and the notebooks reponsible for the same:
@@ -47,7 +47,7 @@ The two sources from where we scraped the following were (the scraper code is at
 The preprocessing of the newly augmented data was done in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Pre-processing%20notebooks/data_merger.ipynb) jupyter notebook. 
 
 ### D-separation and Conditional Tests on the data
-Our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Report.pdf) talks in more detail about the d-separation and conditional independence tests we performed. Our CI tests were performed using the R package bnlearn in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/DSepCITests.ipynb) notebook. 
+Our [project report](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/CS7290_Project_Report.pdf) talks in more detail about the d-separation and conditional independence tests we performed. Our CI tests were performed using the R package bnlearn in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/DSepCITests.ipynb) notebook. 
 
 ### Data Modeling
 First, we created the BayesianModel by defining the nodes and edges of the DAG. The BayesianEstimator was used to learn the Conditional Probability Distribution from the dataset with an equivalent sample size of 10. Using the package pgmy we were able to generate the CPTs, which we serialized and imported into our pyro model. The code for this can be found in [this](https://github.com/jasoriya/Causal-analysis-on-football-transfer-prices/blob/master/Causal%20Model%20notebooks/Causal%20Inference%2C%20Interventions%2C%20and%20Counterfactuals.ipynb) jupyter notebook. Along with the causal model, this notebook also contains our experiments like interventions and counterfactuals.
